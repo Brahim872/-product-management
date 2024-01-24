@@ -43,7 +43,8 @@ Route::middleware(['guest', 'throttle:6,1'])->group(function () {
         ->name('password.email');
 
     Route::post('/reset-password', [NewPasswordController::class, 'store'])
-        ->name('password.store');
+        ->name('password.reset');
+
 
 
 });

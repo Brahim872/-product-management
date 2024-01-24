@@ -1,0 +1,9 @@
+.form-control{
+    color: black !important;
+}
+input::placeholder {
+    color: #c1c1c1 !important;
+}
+form.user .form-control-user {
+    font-size: .95rem !important;
+}

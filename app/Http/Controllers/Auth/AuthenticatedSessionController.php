@@ -42,11 +42,6 @@ class AuthenticatedSessionController extends Controller
 
             if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
 
-                auth()->user()->update([
-                    'ip_address'=>request()->ip(),
-                    'device'=> request()->header('User-Agent'),
-                ]);
-
                 $token = auth()->user()->createToken('auth-token')->plainTextToken;
 
                 $userResource = new UserResource(auth()->user(),$token);

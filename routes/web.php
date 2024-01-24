@@ -13,6 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+
+//Route::get('/login', function () {
+//    return view('auth/login');
+//})->name('web.login');
+//
+//
+Route::get('auth/login',function(){
     return view('welcome');
-});
+})->name('web.login');
+
+
+Route::get('/{any?}',function(){
+   return view('welcome');
+})->where('any','.*')
+//    ->middleware('auth:sanctum')
+;
