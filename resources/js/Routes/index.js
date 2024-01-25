@@ -11,37 +11,37 @@ const router = createRouter({
         {
             path: '/auth/login',
             name: 'login',
-            component: () => import ('../Pages/login.vue'),
+            component: () => import ('../Pages/Auth/login.vue'),
         },
         {
             path: '/auth/register',
             name: 'register',
-            component: () => import ('../Pages/register.vue'),
+            component: () => import ('../Pages/Auth/register.vue'),
         },
         {
             path: '/auth/forgot-password',
             name: 'forgotPassword',
-            component: () => import ('../Pages/forgotPassword.vue'),
+            component: () => import ('../Pages/Auth/forgotPassword.vue'),
         },
         {
             path: '/auth/password-reset',
             name: 'resetPassword',
-            component: () => import ('../Pages/resetPassword.vue'),
+            component: () => import ('../Pages/Auth/resetPassword.vue'),
         },
         {
             path: '/products',
             name: 'products',
-            component: () => import ('../Pages/products.vue'),
+            component: () => import ('../Pages/Product/products.vue'),
         },
         {
             path: '/products-edit',
             name: 'productsEdit',
-            component: () => import ('../Pages/ProductEdit.vue'),
+            component: () => import ('../Pages/Product/productEdit.vue'),
         },
         {
             path: '/products/create',
             name: 'productsCreate',
-            component: () => import ('../Pages/ProductForm.vue'),
+            component: () => import ('../Pages/Product/productForm.vue'),
         },
         {
             path: '/:pathMatch(.*)*',

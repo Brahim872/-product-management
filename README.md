@@ -13,3 +13,5 @@ Email : admin@email.com
 
 Password : admin
 
+❗❗ don't forget to make db:seed
+

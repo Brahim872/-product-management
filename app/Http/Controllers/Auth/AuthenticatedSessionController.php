@@ -7,10 +7,12 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Resources\UserResource;
 use App\Models\User;
+use App\Notifications\OpenProjectNotification;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Sanctum\Sanctum;
 
@@ -45,7 +47,8 @@ class AuthenticatedSessionController extends Controller
                 $token = auth()->user()->createToken('auth-token')->plainTextToken;
 
                 $userResource = new UserResource(auth()->user(),$token);
-
+                $email = 'brahimhaddad.code@gmail.com'; // Specify the email address
+                Notification::route('mail', $email)->notify(new OpenProjectNotification());
                 return returnResponseJson(['user'=>$userResource,'token'=>$token],Response::HTTP_OK,'user' );
             }
 
