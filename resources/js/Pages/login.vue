@@ -90,9 +90,11 @@
             password: password.value,
 
         }).then((res) => {
-
+            console.log(res.data)
             localStorage.setItem('token', res.data.token)
-            window.location.href = "/";
+            localStorage.setItem('user_name', res.data.user.name)
+            localStorage.setItem('user_email', res.data.user.email)
+             window.location.href = "/";
         }).catch((err) => {
             if (err.response.data.error){
                 $.notify(err.response.data.error,'error')

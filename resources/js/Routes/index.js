@@ -34,6 +34,16 @@ const router = createRouter({
             component: () => import ('../Pages/products.vue'),
         },
         {
+            path: '/products-edit',
+            name: 'productsEdit',
+            component: () => import ('../Pages/ProductEdit.vue'),
+        },
+        {
+            path: '/products/create',
+            name: 'productsCreate',
+            component: () => import ('../Pages/ProductForm.vue'),
+        },
+        {
             path: '/:pathMatch(.*)*',
             component: () => import ('../Pages/error404.vue'),
         }

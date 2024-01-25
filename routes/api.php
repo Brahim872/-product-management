@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -58,4 +59,21 @@ Route::middleware(['auth:sanctum', 'throttle:100,1'])->group(function () {
     Route::post('profile', [UserController::class, 'index'])
         ->name('getProfile');
 
+
+    Route::post('product-create', [ProductController::class, 'store'])
+        ->name('getProducts');
+
+    Route::post('product-edit/{product}', [ProductController::class, 'show'])
+        ->name('editProducts');
+
+    Route::post('product-update/{product}', [ProductController::class, 'update'])
+        ->name('updateProducts');
+
+    Route::post('product-delete/{product}', [ProductController::class, 'destroy'])
+        ->name('deleteProducts');
+
 });
+
+
+Route::get('products', [ProductController::class, 'index'])
+    ->name('getProducts');

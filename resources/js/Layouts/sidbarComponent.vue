@@ -12,10 +12,7 @@
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
-            <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-code"></i>
-            </div>
-            <div class="sidebar-brand-text mx-3">tebiyan <sup>code</sup></div>
+            <div class="sidebar-brand-text mx-3">SquaHR</div>
         </a>
 
         <!-- Divider -->
@@ -39,7 +36,7 @@
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item active">
             <a class="nav-link" href="/products">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <i class="fas fa-fw fa-boxes"></i>
                 <span>Products</span></a>
         </li>
 
@@ -52,11 +49,11 @@
 
 
         <!-- Nav Item - Charts -->
-        <li class="nav-item">
-            <a class="nav-link" href="charts.html">
-                <i class="fas fa-fw fa-chart-area"></i>
-                <span>Charts</span></a>
-        </li>
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link" href="charts.html">-->
+<!--                <i class="fas fa-fw fa-chart-area"></i>-->
+<!--                <span>Charts</span></a>-->
+<!--        </li>-->
 
 
 
